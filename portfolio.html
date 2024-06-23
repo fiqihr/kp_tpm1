@@ -4,28 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | John Doe</title>
+    <link rel="stylesheet" href="/assets/css/portfolio-style.css" />
   </head>
   <body>
-    <section id="header">
-      <h1>My Portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#cv">CV</a></li>
-          <li><a href="#project">My Project</a></li>
-          <li><a href="#contactme">Contact Me</a></li>
-        </ul>
-      </nav>
-      <p>
-        Hello my name is John Doe, I am a front end developer who has 5 years of
-        experience in IT industries
-      </p>
-      <img src="assets/john-doe.png" alt="John Doe" width="300" />
-    </section>
+    <header>
+      <div class="container">
+        <h1>My Portfolio</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#project">My Projects</a></li>
+            <li><a href="#contactme">Contact Me</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="intro">
+        <div class="text-intro">
+          <h1 style="font-size: 70px">Hi, I'm John Doe</h1>
+          <p>
+            I am a front-end developer with 5 years of experience in the IT
+            industry🚀
+          </p>
+        </div>
+        <img src="assets/john-doe.png" alt="John Doe" />
+      </div>
+    </header>
 
-    <section id="bio">
-      <h2>This is my Bio</h2>
-      <table border="3">
+    <section id="bio" class="container">
+      <h2>Bio</h2>
+      <table>
         <thead>
           <tr>
             <th>Biodata</th>
@@ -55,56 +63,56 @@
           </tr>
         </tbody>
       </table>
-      <hr />
-    </section>
-    <section id="cv">
-      <h1>CV</h1>
-      <p>You can click button below to download my CV</p>
-      <button><a href="#"></a>Download CV</button>
     </section>
     <hr />
-    <section id="project">
-      <h2>Project</h2>
+    <section id="cv" class="container">
+      <h2>CV</h2>
+      <p>You can click the button below to download my CV.</p>
+      <button><a href="#">Download CV</a></button>
+    </section>
+    <hr />
+    <section id="project" class="container">
+      <h2>Projects</h2>
       <ul>
         <li>
           <h3>Project A</h3>
-          <img src="/assets/project_a.jpg" alt="project a" width="200" />
+          <img src="/assets/project_a.jpg" alt="Project A" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
             aliquid architecto quasi exercitationem ipsum, porro quo impedit
             voluptatum id non...
           </p>
-          <p><a href="#" target="_blank" rel="noopener">View More</a></p>
+          <p><a href="#" target="_blank" rel="noopener">View More -></a></p>
         </li>
         <li>
           <h3>Project B</h3>
-          <img src="/assets/project_b.jpg" alt="project b" width="200" />
+          <img src="/assets/project_b.jpg" alt="Project B" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. In dolorem
             quo porro ad corrupti consequuntur deleniti sunt voluptas provident
             dolores?...
           </p>
-          <p><a href="#" target="_blank" rel="noopener">View More</a></p>
+          <p><a href="#" target="_blank" rel="noopener">View More -></a></p>
         </li>
         <li>
           <h3>Project C</h3>
-          <img src="/assets/project_c.jpg" alt="project c" width="200" />
+          <img src="/assets/project_c.jpg" alt="Project C" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
             eaque ad cupiditate odio, quidem ut commodi error excepturi atque
             quae...
           </p>
-          <p><a href="#" target="_blank" rel="noopener">View More</a></p>
+          <p><a href="#" target="_blank" rel="noopener">View More -></a></p>
         </li>
       </ul>
     </section>
     <hr />
-    <section id="contactme">
+    <section id="contactme" class="container">
       <h2>Contact Me</h2>
-      <h3>Curious? send me a message</h3>
-      <fieldset>
-        <legend>Personal Information</legend>
-        <div>
+      <h3>Curious? Send me a message</h3>
+      <form>
+        <h3>Personal Information</h3>
+        <div class="form-input">
           <label for="fullname">Full Name:</label>
           <input
             type="text"
@@ -123,10 +131,10 @@
           />
         </div>
         <div>
-          <label for="email">Phone number:</label>
+          <label for="phonenumber">Phone Number:</label>
           <input
             type="text"
-            name="text"
+            name="phonenumber"
             id="phonenumber"
             placeholder="Your phone number..."
           />
@@ -135,12 +143,14 @@
           <label for="message">Message</label>
           <textarea name="message" id="message"></textarea>
         </div>
-      </fieldset>
-      <input type="submit" value="Send" />
+        <input class="button-send" type="submit" value="Send" />
+      </form>
     </section>
-    <hr />
+
     <footer>
-      <p>&copy; 2024 | John Doe</p>
+      <div class="container">
+        <p>&copy; 2024 | John Doe</p>
+      </div>
     </footer>
   </body>
 </html>
