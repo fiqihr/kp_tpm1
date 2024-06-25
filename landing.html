@@ -3,34 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portofolio | Fiqih Refwahajan</title>
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>My Portfolio | Fiqih Refwahajan</title>
+    <!-- <link rel="stylesheet" href="/assets/css/style.css" /> -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
   </head>
-  <body>
-    <h1>Fiqih Ref Portofolio</h1>
+  <body class="m-center">
     <header>
-      <nav class="m-center">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Contact Me</a></li>
-          <li><a href="#">Portfolio</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section id="jumbotron">
-      <img src="/assets/ui-music.jpg" alt="music" width="600" />
-      <div id="jumbotext">
-      <h2>Where coffe transform to code.</h2>
-      <div>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-        voluptatem dolores tempora aspernatur odio debitis facere perspiciatis
-        obcaecati repellendus nam! Incidunt hic eos assumenda fuga possimus
-        optio, ducimus alias ipsa.
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <h1>Fiqih Ref Portfolio</h1>
+          </div>
+          <div class="col-md-8">
+            <p>Halo</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </header>
+    <section id="jumbotron" class="container">
+      <div class="row">
+        <img src="/assets/ui-music.jpg" alt="music" width="600" />
+        <div id="jumbotext">
+          <h2>Where coffee transforms to code.</h2>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            voluptatem dolores tempora aspernatur odio debitis facere
+            perspiciatis obcaecati repellendus nam! Incidunt hic eos assumenda
+            fuga possimus optio, ducimus alias ipsa.
+          </div>
+        </div>
+      </div>
     </section>
-    <section>
+    <hr />
+    <section id="project">
       <h2>My Latest Project</h2>
       <ul>
         <li>
@@ -81,7 +86,7 @@
               explicabo dolor rerum eveniet placeat.
             </td>
             <td>95</td>
-            <td>Thank for all</td>
+            <td>Thank you for all</td>
           </tr>
           <tr>
             <td>2</td>
@@ -91,7 +96,7 @@
               explicabo dolor rerum eveniet placeat.
             </td>
             <td>95</td>
-            <td>Thank for all</td>
+            <td>Thank you for all</td>
           </tr>
           <tr>
             <td>3</td>
@@ -101,7 +106,7 @@
               explicabo dolor rerum eveniet placeat.
             </td>
             <td>95</td>
-            <td>Thank for all</td>
+            <td>Thank you for all</td>
           </tr>
         </tbody>
         <tfoot>
@@ -112,9 +117,8 @@
         </tfoot>
       </table>
     </section>
-
     <section id="contact-me">
-      <h2>Curious? send me a message</h2>
+      <h2>Curious? Send me a message</h2>
       <fieldset>
         <legend>Personal Information</legend>
         <div>
@@ -137,7 +141,7 @@
         </div>
         <div>
           <label for="input-study">Study Alterra Academy</label>
-          <input type="text" name="input-study" />
+          <input type="text" name="input-study" id="input-study" />
         </div>
       </fieldset>
       <fieldset>
@@ -149,8 +153,18 @@
       </fieldset>
       <input type="submit" value="Send" />
     </section>
+    <div class="container">
+      <div class="row">
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 bg-primary">Kolom 1</div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-3 bg-secondary">Kolom 2</div>
+          <div class="col-sm-6 col-md-4 col-lg-3 bg-danger">Kolom 3</div>
+          <div class="col-sm-6 col-md-4 col-lg-3 bg-warning">Kolom 4</div>
+      </div>
+  </div>
+  
     <footer>
       <p>&copy; 2024 | Fiqih Refwahajan</p>
     </footer>
+    <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>
