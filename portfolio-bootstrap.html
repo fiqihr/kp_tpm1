@@ -8,11 +8,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -25,15 +24,27 @@
         font-weight: 600;
       }
       .custom-rounded {
-        border-radius: 20px; */
+        border-radius: 20px;
+      }
+      .is-valid {
+        border-color: #198754;
+      }
+      .is-invalid {
+        border-color: #dc3545;
+      }
+      .invalid-feedback {
+        display: none;
+        color: #dc3545;
+      }
+      .is-invalid ~ .invalid-feedback {
+        display: block;
       }
     </style>
   </head>
   <body class="bg-light">
     <div class="container">
-
       <!-- start of navbar -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">My Portfolio</a>
           <button
@@ -67,7 +78,6 @@
       </nav>
       <!-- end of navbar -->
       <hr />
-      
       <!-- start of jumbotron -->
       <div class="container-fluid mt-3">
         <div class="row">
@@ -80,20 +90,19 @@
               </p>
             </div>
           </div>
-
           <div class="col-lg-5 order-2">
             <img
               src="assets/john-doe.png"
               alt="John Doe"
               class="img-fluid mx-auto d-block mt-5 w-75"
-              data-toggle="tooltip" title="This is my profile picture"
+              data-toggle="tooltip"
+              title="This is my profile picture"
             />
           </div>
         </div>
       </div>
       <!-- end of jumbotron -->
       <hr />
-
       <!-- start of CV -->
       <div class="container">
         <h2 class="text-primary fw-bold">CV</h2>
@@ -213,7 +222,6 @@
       </div>
       <!-- end of CV -->
       <hr />
-
       <!-- start of my projects-->
       <div class="container">
         <h2 class="text-primary fw-bold">My Projects</h2>
@@ -287,16 +295,15 @@
       </div>
       <!-- end of my projects-->
       <hr />
-
       <!-- start of contact me -->
-      <div class="container">
+      <div class="container mt-5">
         <h2 class="mb-3 text-primary fw-bold">Contact Me</h2>
         <h6>Curious? Send me a message</h6>
         <div class="row justify-content-center">
           <div class="col-md-12">
             <div class="card">
               <div class="card-body">
-                <form>
+                <form id="contactForm">
                   <div class="form-group d-lg-flex my-2">
                     <div
                       class="col-lg-3 d-flex justify-content-between pe-3 align-items-center"
@@ -315,27 +322,53 @@
                     <div
                       class="col-lg-3 d-flex justify-content-between pe-3 align-items-center"
                     >
-                      <label for="name" class="col-lg-3">Email</label>
+                      <label for="email" class="col-lg-3">Email</label>
                       <span>:</span>
                     </div>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      placeholder="Enter your email"
-                    />
+                    <div class="col-lg-9">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter your email"
+                      />
+                      <div class="invalid-feedback">
+                        Please enter a valid email.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group d-lg-flex my-2">
+                    <div
+                      class="col-lg-3 d-flex justify-content-between pe-3 align-items-center"
+                    >
+                      <label for="phone" class="col-lg-3">Phone Number</label>
+                      <span>:</span>
+                    </div>
+                    <div class="col-lg-9">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                      />
+                      <div class="invalid-feedback">
+                        Please enter a valid phone number (minimum 12 digits).
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group d-lg-flex my-2">
                     <div class="col-lg-3 d-flex justify-content-between pe-3">
-                      <label for="name" class="col-lg-3">Message</label>
+                      <label for="message" class="col-lg-3">Message</label>
                       <span>:</span>
                     </div>
-                    <textarea
-                      class="form-control"
-                      id="message"
-                      rows="5"
-                      placeholder="Enter your message"
-                    ></textarea>
+                    <div class="col-lg-9">
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        rows="5"
+                        placeholder="Enter your message"
+                      ></textarea>
+                    </div>
                   </div>
                   <div class="d-flex justify-content-end mt-3">
                     <button type="submit" class="btn btn-primary px-5">
@@ -343,12 +376,66 @@
                     </button>
                   </div>
                 </form>
+                <div
+                  id="successMessage"
+                  class="alert alert-success alert-dismissible fade show mt-3"
+                  role="alert"
+                >
+                  Berhasil Dikirim!
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"
+                  ></button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <!-- end of contact me -->
+    </div>
+    <hr />
+    <!-- start of temperature converter -->
+    <div class="container mt-5">
+      <h2 class="mb-3 text-primary fw-bold">Temperature Converter</h2>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="fahrenheit">Fahrenheit</label>
+            <input
+              type="number"
+              class="form-control"
+              id="fahrenheit"
+              placeholder="Enter Fahrenheit"
+            />
+          </div>
+          <button class="my-2 btn btn-primary" id="convertFtoC">
+            Convert to Celsius
+          </button>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="celsius">Celsius</label>
+            <input
+              type="number"
+              class="form-control"
+              id="celsius"
+              placeholder="Enter Celsius"
+            />
+          </div>
+          <button class="my-2 btn btn-primary" id="convertCtoF">
+            Convert to Fahrenheit
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- start of temperature converter -->
+
+    <div class="container mt-5">
+      <h2 class="mb-3 text-primary fw-bold">Current Date and Time</h2>
+      <div id="currentDateTime" class="fw-bold"></div>
     </div>
 
     <!-- start of footer -->
@@ -366,17 +453,16 @@
             ><i class="fab fa-instagram fa-2x"></i
           ></a>
         </div>
-
         <span class="text-white">© 2024 | John Doe Portfolio</span>
       </div>
     </footer>
     <!-- end of footer -->
-    
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script>
       $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip();
       });
     </script>
-    <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>
